@@ -1,0 +1,64 @@
+.main-sidebar,.navbar {
+    background-color: #21273f !important;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif !important;
+}   
+
+.navbar {
+    background-color: #21273f !important;
+}
+
+.nav-header {
+    background-color: #21273f !important;
+    color: #fff !important;
+    border: 1px solid #21273f;
+    border-radius: .25rem;
+    font-size: 13px !important
+}
+
+.nav-link {
+    color: #fff !important;
+}
+
+.font-weight-light .fa-search {
+    color: #fff !important;
+}
+
+.brand-text {
+    color: #fff !important;
+
+}
+
+.active {
+    /*background-color: #4964cd !important;*/
+    background-color: #D13A29 !important;
+}
+
+.modal-header {
+    background-color: #334FBA !important;
+    color: #fff !important;
+}
+
+.close {
+    color: #fff !important;
+}
+
+/*.sorting {
+    background-color: #334FBA !important;
+    color: #fff !important;
+}
+
+.sorting_desc, .sorting_asc {
+    background-color: #4964cd !important;
+    color: #fff !important;
+}
+
+.card-header{
+    background-color: #4964cd !important;
+    color: #fff !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+}*/
+
+.nav-treeview{
+    text-indent: 5px; 
+}

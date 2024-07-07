@@ -1,0 +1,43 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('vehicles', function (Blueprint $table) {
+            $table->id();
+            $table->string('name', 50);
+            $table->string('code', 20)->nullable();
+            $table->string('plate', 20);
+            $table->string('year', 20);
+            $table->integer('capacity');
+            $table->enum('status', ['Disponible','No Disponible','En Mantenimiento'])->default('Disponible');
+            $table->text('description')->nullable();
+            $table->unsignedBigInteger('brand_id');
+            $table->unsignedBigInteger('model_id');
+            $table->unsignedBigInteger('type_id');
+            $table->unsignedBigInteger('color_id');
+            $table->foreign('brand_id')->references('id')->on('brands');
+            $table->foreign('model_id')->references('id')->on('brandmodels');
+            $table->foreign('type_id')->references('id')->on('vehicletypes');
+            $table->foreign('color_id')->references('id')->on('vehiclecolors');
+
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('vehicles');
+    }
+};
